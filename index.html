@@ -15,7 +15,7 @@
             let diff = (date2.getTime() - date1.getTime()) / 1000;
             diff /= 3600;
 
-            return Math.abs(Math.round(diff));
+            return Math.abs(Math.floor(diff));
         }
 
         document.getElementById('title').innerHTML = `It has been ${diff_hours(new Date('2020-11-03T00:00:00'), new Date())} hours since Tuesday began`

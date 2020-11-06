@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>What Hour Of Tuesday Is It?</title>
+        <style type="text/css">
+            #title {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="title"></h1>
+    </body>
+    <script type="application/javascript">
+        function diff_hours(date1, date2) {
+            let diff = (date2.getTime() - date1.getTime()) / 1000;
+            diff /= 3600;
+
+            return Math.abs(Math.round(diff));
+        }
+
+        document.getElementById('title').innerHTML = `It has been ${diff_hours(new Date('2020-11-03T00:00:00'), new Date())} hours since Tuesday began`
+    </script>
+</html>
